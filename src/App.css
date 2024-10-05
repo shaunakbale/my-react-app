@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+/* src/styles/App.css */
+
+/* Importing the Roboto font, make sure this is included in your index.html */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; /* Set the global font */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  line-height: 1.6; /* Set a default line height for better readability */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Remove default margin for headings */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"],
+input[type="file"],
+textarea,
+button {
+  font-family: 'Roboto', sans-serif; /* Use the same font across all elements */
+  font-size: 16px; /* Set a consistent font size */
+  padding: 10px; /* Add padding for better appearance */
+  border: 1px solid #ccc; /* Style the border */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%; /* Make inputs full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin-bottom: 10px; /* Space between inputs */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+textarea {
+  resize: none; /* Prevent resizing */
+  height: 100px; /* Set a fixed height */
+}
+
+/* Optional: Style the form */
+.upload-question-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Optional: Style the answer display */
+.answer-display {
+  font-family: 'Roboto', sans-serif; /* Ensure consistent font */
+  padding: 20px; /* Add padding */
+  border: 1px solid #ccc; /* Border for visibility */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background for contrast */
 }
